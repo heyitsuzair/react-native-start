@@ -10,6 +10,7 @@ import React from 'react';
 import {Text, View, StyleSheet} from 'react-native';
 import TextInputComp from './components/TextInput';
 import Form from './components/Form';
+import FlexComp from './components/Flex';
 
 const App = () => {
   return (
@@ -17,7 +18,8 @@ const App = () => {
       {/* <Text style={[styles.red, styles.fonts]}>Just Red</Text>
       <Text style={[styles.others, styles.fonts]}>Just Blue</Text> */}
       {/* <TextInputComp /> */}
-      <Form />
+      {/* <Form /> */}
+      <FlexComp />
     </View>
   );
 };

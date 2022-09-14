@@ -14,20 +14,20 @@ export default function Form() {
         placeholder="Enter Your Name"
         value={value.name}
         style={styles.textbox}
-        onChangeText={text => setValue({name: text})}
+        onChangeText={text => setValue({...value, name: text})}
       />
       <TextInput
         placeholder="Enter Your Password"
         value={value.password}
         style={styles.textbox}
         secureTextEntry
-        onChangeText={text => setValue({password: text})}
+        onChangeText={text => setValue({...value, password: text})}
       />
       <TextInput
         placeholder="Enter Your Address"
         value={value.address}
         style={styles.textbox}
-        onChangeText={text => setValue({address: text})}
+        onChangeText={text => setValue({...value, address: text})}
       />
       <Button
         style={styles.button}
@@ -45,5 +45,6 @@ const styles = StyleSheet.create({
     padding: 10,
     marginHorizontal: 20,
     marginVertical: 30,
+    borderRadius: 8,
   },
 });
