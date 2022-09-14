@@ -15,11 +15,14 @@ import {createMaterialBottomTabNavigator} from '@react-navigation/material-botto
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
 import Home from './views/Home';
 import Profile from './views/Profile';
+import {createDrawerNavigator} from '@react-navigation/drawer';
 
 const Stack = createNativeStackNavigator();
 
 // const Tab = createMaterialTopTabNavigator();
 const Tab = createMaterialBottomTabNavigator();
+
+const Drawer = createDrawerNavigator();
 
 function App() {
   return (
@@ -41,8 +44,18 @@ function App() {
         </Tab.Navigator>
       </NavigationContainer> */}
 
-      {/* Bottom Tabs Navigator */}
+      {/* Drawer Navigation */}
+
       <NavigationContainer>
+        <Drawer.Navigator initialRouteName="Home">
+          <Drawer.Screen name="Home" component={Home} />
+          <Drawer.Screen name="Profile" component={Profile} />
+        </Drawer.Navigator>
+      </NavigationContainer>
+
+      {/* Bottom Tabs Navigator */}
+
+      {/* <NavigationContainer>
         <Tab.Navigator
           initialRouteName="Home"
           activeColor="white"
@@ -71,7 +84,7 @@ function App() {
             }}
           />
         </Tab.Navigator>
-      </NavigationContainer>
+      </NavigationContainer> */}
     </>
   );
 }
