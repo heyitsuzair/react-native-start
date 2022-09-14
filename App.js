@@ -6,23 +6,45 @@
  * @flow strict-local
  */
 
-import React from 'react';
-import {Text, View, StyleSheet} from 'react-native';
-import TextInputComp from './components/TextInput';
-import Form from './components/Form';
-import FlexComp from './components/Flex';
+import * as React from 'react';
+import {View, Text, Button} from 'react-native';
+import {NavigationContainer} from '@react-navigation/native';
+import {createNativeStackNavigator} from '@react-navigation/native-stack';
 
-const App = () => {
+function HomeScreen({navigation}) {
   return (
-    <View>
-      {/* <Text style={[styles.red, styles.fonts]}>Just Red</Text>
-      <Text style={[styles.others, styles.fonts]}>Just Blue</Text> */}
-      {/* <TextInputComp /> */}
-      {/* <Form /> */}
-      <FlexComp />
+    <View style={{flex: 1, alignItems: 'center', justifyContent: 'center'}}>
+      <Text>Home Screen</Text>
+      <Button
+        title="Go To Profile"
+        onPress={() => navigation.navigate('Profile')}
+      />
     </View>
   );
-};
+}
+function Profile({navigation}) {
+  return (
+    <View style={{flex: 1, alignItems: 'center', justifyContent: 'center'}}>
+      <Text>Profile</Text>
+      <Button title="Go To Home" onPress={() => navigation.navigate('Home')} />
+    </View>
+  );
+}
+
+const Stack = createNativeStackNavigator();
+
+function App() {
+  return (
+    <NavigationContainer>
+      <Stack.Navigator>
+        <Stack.Screen name="Home" component={HomeScreen} />
+        <Stack.Screen name="Profile" component={Profile} />
+      </Stack.Navigator>
+    </NavigationContainer>
+  );
+}
+
+export default App;
 
 // const styles = StyleSheet.create({
 //   red: {
@@ -38,4 +60,4 @@ const App = () => {
 //   },
 // });
 
-export default App;
+// export default App;
