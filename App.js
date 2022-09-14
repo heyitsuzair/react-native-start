@@ -14,7 +14,7 @@ const App = () => {
   return (
     <View>
       <Text>Hello World!</Text>
-      <Login text="Login" />
+      <Login />
     </View>
   );
 };

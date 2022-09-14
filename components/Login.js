@@ -1,15 +1,18 @@
 /* eslint-disable no-alert */
-import React from 'react';
+import React, {useState} from 'react';
 import {Button, Text, View} from 'react-native';
-export default function Login({text}) {
+export default function Login() {
+  const [btnText, setBtnText] = useState('Login');
+
   const onPressLogin = () => {
     alert('Hello Login');
+    setBtnText('Clicked');
   };
 
   return (
     <View>
-      <Text>{text}</Text>
-      <Button title={text} onPress={() => onPressLogin()} />
+      <Text>Login</Text>
+      <Button title={btnText} onPress={() => onPressLogin()} />
     </View>
   );
 }
