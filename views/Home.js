@@ -5,10 +5,20 @@ export default function Home({navigation}) {
   return (
     <View style={{flex: 1, alignItems: 'center', justifyContent: 'center'}}>
       <Text>Home Screen</Text>
-      <Button
+      {/* <Button
         title="Go To Profile"
         onPress={() => navigation.navigate('Profile')}
-      />
+      /> */}
+      <Pressable
+        style={{
+          marginTop: 10,
+          backgroundColor: 'blue',
+          padding: 10,
+          borderRadius: 5,
+        }}
+        onPress={() => navigation.navigate('Profile')}>
+        <Text style={{color: 'white', fontWeight: '800'}}>Go To Profile</Text>
+      </Pressable>
       {/* <Button onPress={() => navigation.openDrawer()} title="Open Drawer" /> */}
       <Pressable
         style={{

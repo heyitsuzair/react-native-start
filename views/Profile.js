@@ -13,7 +13,7 @@ export default function Profile({navigation}) {
           padding: 10,
           borderRadius: 5,
         }}
-        onPress={() => navigation.goBack()}>
+        onPress={() => navigation.navigate('Home')}>
         <Text style={{color: 'white', fontWeight: '800'}}>Go Back To Home</Text>
       </Pressable>
     </View>

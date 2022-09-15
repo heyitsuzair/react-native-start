@@ -16,6 +16,7 @@ import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityI
 import Home from './views/Home';
 import Profile from './views/Profile';
 import {createDrawerNavigator} from '@react-navigation/drawer';
+import ScrollView from './views/ScrollView';
 
 const Stack = createNativeStackNavigator();
 
@@ -50,6 +51,7 @@ function App() {
         <Drawer.Navigator initialRouteName="Home">
           <Drawer.Screen name="Home" component={Home} />
           <Drawer.Screen name="Profile" component={Profile} />
+          <Drawer.Screen name="Scroll View" component={ScrollView} />
         </Drawer.Navigator>
       </NavigationContainer>
 
