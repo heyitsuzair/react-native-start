@@ -20,6 +20,7 @@ import ScrollView from './views/ScrollView';
 import FlatList from './views/FlatList';
 import Apis from './views/Apis';
 import FormValidation from './views/FormValidation';
+import DataScreens from './views/DataScreens';
 
 const Stack = createNativeStackNavigator();
 
@@ -58,6 +59,7 @@ function App() {
           <Drawer.Screen name="Flat List" component={FlatList} />
           <Drawer.Screen name="Api" component={Apis} />
           <Drawer.Screen name="Form Validation" component={FormValidation} />
+          <Drawer.Screen name="Data Between Screens" component={DataScreens} />
         </Drawer.Navigator>
       </NavigationContainer>
 
