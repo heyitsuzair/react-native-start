@@ -17,6 +17,7 @@ import Home from './views/Home';
 import Profile from './views/Profile';
 import {createDrawerNavigator} from '@react-navigation/drawer';
 import ScrollView from './views/ScrollView';
+import FlatList from './views/FlatList';
 
 const Stack = createNativeStackNavigator();
 
@@ -52,6 +53,7 @@ function App() {
           <Drawer.Screen name="Home" component={Home} />
           <Drawer.Screen name="Profile" component={Profile} />
           <Drawer.Screen name="Scroll View" component={ScrollView} />
+          <Drawer.Screen name="Flat List" component={FlatList} />
         </Drawer.Navigator>
       </NavigationContainer>
 
