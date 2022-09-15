@@ -18,6 +18,7 @@ import Profile from './views/Profile';
 import {createDrawerNavigator} from '@react-navigation/drawer';
 import ScrollView from './views/ScrollView';
 import FlatList from './views/FlatList';
+import Apis from './views/Apis';
 
 const Stack = createNativeStackNavigator();
 
@@ -54,6 +55,7 @@ function App() {
           <Drawer.Screen name="Profile" component={Profile} />
           <Drawer.Screen name="Scroll View" component={ScrollView} />
           <Drawer.Screen name="Flat List" component={FlatList} />
+          <Drawer.Screen name="Api" component={Apis} />
         </Drawer.Navigator>
       </NavigationContainer>
 
