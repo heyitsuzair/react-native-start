@@ -23,6 +23,7 @@ import FormValidation from './views/FormValidation';
 import DataScreens from './views/DataScreens';
 import Loader from './views/Loader';
 import Modal from './views/Modal';
+import Location from './views/Location';
 
 const Stack = createNativeStackNavigator();
 
@@ -64,6 +65,7 @@ function App() {
           <Drawer.Screen name="Data Between Screens" component={DataScreens} />
           <Drawer.Screen name="Loader" component={Loader} />
           <Drawer.Screen name="Modal" component={Modal} />
+          <Drawer.Screen name="Location" component={Location} />
         </Drawer.Navigator>
       </NavigationContainer>
 

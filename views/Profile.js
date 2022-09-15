@@ -2,10 +2,10 @@ import {View, Text, Button, Pressable} from 'react-native';
 import React, {useEffect} from 'react';
 
 export default function Profile({route, navigation}) {
-  useEffect(() => {
-    console.warn(route.params);
-    alert(JSON.stringify(route.params));
-  }, []);
+  // useEffect(() => {
+  //   console.warn(route.params);
+  //   alert(JSON.stringify(route.params));
+  // }, []);
 
   return (
     <View style={{flex: 1, alignItems: 'center', justifyContent: 'center'}}>

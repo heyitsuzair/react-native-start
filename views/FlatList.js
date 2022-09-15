@@ -1,7 +1,7 @@
 import {View, Text, FlatList, Pressable} from 'react-native';
 import React, {useState} from 'react';
 
-export default function FlatListComp() {
+export default function FlatListComp({navigation}) {
   const [data, setData] = useState([
     {name: 'uzair', email: 'uzair@gmail.com'},
     {name: 'ahmed', email: 'uzair@gmail.com'},

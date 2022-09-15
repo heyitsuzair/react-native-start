@@ -11,7 +11,10 @@ export default function ModalComp() {
           <View
             style={{
               backgroundColor: 'white',
-              margin: 50,
+              marginLeft: 'auto',
+              marginRight: 'auto',
+              marginTop: 'auto',
+              marginBottom: 'auto',
               borderRadius: 4,
               padding: 230,
             }}>
